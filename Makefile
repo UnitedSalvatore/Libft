@@ -61,8 +61,7 @@ FILENAMES = ft_memset.c \
 			ft_count_words.c \
 			ft_word_len.c \
 			ft_is_whitespace.c \
-			ft_plus_one.c \
-			ft_minus_one.c
+			ft_memjoin.c
 
 SOURCES = $(addprefix ./, $(FILENAMES))
 OBJECTS = $(addprefix obj/, $(FILENAMES:.c=.o))

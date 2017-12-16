@@ -6,7 +6,7 @@
 /*   By: ypikul <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 18:46:54 by ypikul            #+#    #+#             */
-/*   Updated: 2017/10/29 19:21:20 by ypikul           ###   ########.fr       */
+/*   Updated: 2017/12/16 18:47:18 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 size_t				ft_count_words(char const *s, char c);
 size_t				ft_word_len(char const *s, char c);
 int					ft_is_whitespace(const char c);
-int					ft_plus_one(int n);
-int					ft_minus_one(int n);
+void				*ft_memjoin(void const *ptr1, size_t n1, void const *ptr2, size_t n2);
 
 #endif
