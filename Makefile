@@ -28,6 +28,7 @@ FILENAMES = ft_memset.c \
 			ft_isprint.c \
 			ft_toupper.c \
 			ft_tolower.c \
+			\
 			ft_memalloc.c \
 			ft_memdel.c \
 			ft_strnew.c \
@@ -58,10 +59,12 @@ FILENAMES = ft_memset.c \
 			ft_lstadd.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
+			\
 			ft_count_words.c \
 			ft_word_len.c \
 			ft_is_whitespace.c \
-			ft_memjoin.c
+			ft_memjoin.c \
+			ft_itoa_base.c
 
 SOURCES = $(addprefix ./, $(FILENAMES))
 OBJECTS = $(addprefix obj/, $(FILENAMES:.c=.o))
