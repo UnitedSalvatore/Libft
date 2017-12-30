@@ -63,13 +63,14 @@ FILENAMES = ft_memset.c \
 			ft_count_words.c \
 			ft_wordlen.c \
 			ft_memjoin.c \
-			ft_itoa_base.c
+			ft_itoa_base.c \
+			get_next_line.c
 
 SOURCES = $(addprefix ./, $(FILENAMES))
 OBJECTS = $(addprefix obj/, $(FILENAMES:.c=.o))
 
 CC = gcc
-FLAGS ?= -c -Wall -Wextra -Werror -Wconversion
+FLAGS ?= -c -Wall -Wextra -Werror
 FLAGS += -I./
 
 all: $(NAME)

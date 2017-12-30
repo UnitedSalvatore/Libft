@@ -6,7 +6,7 @@
 /*   By: ypikul <ypikul@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 18:46:54 by ypikul            #+#    #+#             */
-/*   Updated: 2017/12/30 21:25:45 by ypikul           ###   ########.fr       */
+/*   Updated: 2017/12/30 22:27:18 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,27 @@
 # define LIBFT_H
 
 # include <string.h>
+
+/*
+**	get_next_line
+*/
+
+# define BUFF_SIZE 64
+# define MALLCHECK(ptr) if (!ptr) return (-1)
+
+typedef struct		s_lst_fd
+{
+	int				fd;
+	size_t			size;
+	char			*content;
+	struct s_lst_fd	*next;
+}					t_lst_fd;
+
+int					get_next_line(const int fd, char **line);
+
+/*
+**	libft
+*/
 
 typedef struct		s_list
 {
