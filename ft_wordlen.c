@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_word_len.c                                      :+:      :+:    :+:   */
+/*   ft_wordlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ypikul <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 18:52:19 by ypikul            #+#    #+#             */
-/*   Updated: 2017/10/29 19:14:45 by ypikul           ###   ########.fr       */
+/*   Updated: 2017/12/28 16:15:10 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_word_len(char const *s, char c)
+size_t	ft_wordlen(char const *str)
 {
-	size_t len;
+	size_t i;
 
-	if (s == NULL || c == '\0')
+	if (str == NULL)
 		return (0);
-	len = 0;
-	while (ft_is_whitespace(*s))
-		s++;
-	while (*s != c && *s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
+	i = 0;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	while (str[i] && !((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))
+		i++;
+	return (i);
 }
