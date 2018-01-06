@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ypikul <ypikul@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ypikul <ypikul@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 04:32:10 by ypikul            #+#    #+#             */
-/*   Updated: 2017/12/30 22:11:33 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/01/08 00:01:09 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,21 +63,20 @@ static t_lst_fd		*read_file(const int fd, t_lst_fd *current)
 	char	*str;
 	ssize_t	ret;
 
-	while (!(ft_memchr(current->content, '\n', current->size)) \
-			&& (ret = read(fd, buf, BUFF_SIZE)) > 0)
-	{
-		buf[ret] = '\0';
-		str = current->content;
-		if (!(current->content = malloc(current->size + ret + 1)))
+	if (!(ft_memchr(current->content, '\n', current->size)))
+		while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
 		{
+			buf[ret] = '\0';
+			str = current->content;
+			current->content = ft_memjoin(current->content, current->size, \
+				buf, ret + 1);
+			current->size += ret;
 			ft_strdel(&str);
-			return (NULL);
+			if (!(current->content))
+				return (NULL);
+			if (ft_memchr(buf, '\n', ret))
+				break ;
 		}
-		ft_memcpy(current->content, str, current->size);
-		ft_memcpy(current->content + current->size, buf, ret + 1);
-		current->size += ret;
-		ft_strdel(&str);
-	}
 	return (current);
 }
 
@@ -95,7 +94,7 @@ static t_lst_fd		*get_current_fd(const int fd, t_lst_fd **list)
 	if (!(current = malloc(sizeof(*current))))
 		return (NULL);
 	current->fd = fd;
-	if (!(current->content = ft_strdup("\0")))
+	if (!(current->content = ft_strnew(0)))
 	{
 		free(current);
 		return (NULL);
