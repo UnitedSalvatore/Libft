@@ -6,7 +6,7 @@
 /*   By: ypikul <ypikul@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 18:46:54 by ypikul            #+#    #+#             */
-/*   Updated: 2017/12/30 22:27:18 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/01/24 14:35:13 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 
 /*
-**	get_next_line
+**	ft_getline
 */
 
 # define BUFF_SIZE 64
@@ -30,7 +30,7 @@ typedef struct		s_lst_fd
 	struct s_lst_fd	*next;
 }					t_lst_fd;
 
-int					get_next_line(const int fd, char **line);
+int					ft_getline(const int fd, char **line);
 
 /*
 **	libft

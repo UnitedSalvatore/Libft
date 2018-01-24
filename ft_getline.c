@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_getline.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ypikul <ypikul@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 04:32:10 by ypikul            #+#    #+#             */
-/*   Updated: 2018/01/08 00:01:09 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/01/24 14:34:47 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ static t_lst_fd		*get_current_fd(const int fd, t_lst_fd **list)
 	return (current);
 }
 
-int					get_next_line(const int fd, char **line)
+int					ft_getline(const int fd, char **line)
 {
 	static t_lst_fd		*list;
 	t_lst_fd			*current;

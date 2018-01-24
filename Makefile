@@ -64,7 +64,7 @@ FILENAMES = ft_memset.c \
 			ft_wordlen.c \
 			ft_memjoin.c \
 			ft_itoa_base.c \
-			get_next_line.c
+			ft_getline.c
 
 SOURCES = $(addprefix ./, $(FILENAMES))
 OBJECTS = $(addprefix obj/, $(FILENAMES:.c=.o))
