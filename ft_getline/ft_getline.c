@@ -6,13 +6,14 @@
 /*   By: ypikul <ypikul@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/26 04:32:10 by ypikul            #+#    #+#             */
-/*   Updated: 2018/01/24 14:34:47 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/03/01 05:38:27 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 #include <stdlib.h>
+#include "__ft_getline.h"
+#include "libft.h"
 
 static void			del_node(t_lst_fd **list, t_lst_fd *curr)
 {

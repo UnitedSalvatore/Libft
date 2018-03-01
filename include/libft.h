@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ypikul <ypikul@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ypikul <ypikul@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 18:46:54 by ypikul            #+#    #+#             */
-/*   Updated: 2018/02/16 21:04:30 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/03/01 05:02:43 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,6 @@
 # define LIBFT_H
 
 # include <string.h>
-
-/*
-**	ft_getline
-*/
-
-# define BUFF_SIZE 64
-# define MALLCHECK(ptr) if (!ptr) return (-1)
-
-typedef struct		s_lst_fd
-{
-	int				fd;
-	size_t			size;
-	char			*content;
-	struct s_lst_fd	*next;
-}					t_lst_fd;
-
-int					ft_getline(const int fd, char **line);
-
-/*
-**	libft
-*/
 
 typedef struct		s_list
 {
