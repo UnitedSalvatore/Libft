@@ -6,12 +6,12 @@
 /*   By: ypikul <ypikul@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/06 12:41:15 by ypikul            #+#    #+#             */
-/*   Updated: 2018/03/01 04:47:02 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/03/05 15:35:19 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "__ft_printf.h"
+#include "ft_printf_.h"
 
 void		ft_add_to_buf(const char c, struct s_buffer *buffer)
 {

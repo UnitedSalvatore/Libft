@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   __ft_printf.h                                      :+:      :+:    :+:   */
+/*   ft_printf_.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ypikul <ypikul@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/01 04:02:14 by ypikul            #+#    #+#             */
-/*   Updated: 2018/03/01 04:46:45 by ypikul           ###   ########.fr       */
+/*   Updated: 2018/03/05 15:33:31 by ypikul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FT_PRINTF_H
-# define __FT_PRINTF_H
+#ifndef FT_PRINTF__H
+# define FT_PRINTF__H
 
 # include <stdarg.h>
 # include <stdint.h>
